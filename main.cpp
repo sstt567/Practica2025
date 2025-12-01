@@ -2,22 +2,22 @@
 #include <vector>
 using namespace std;
 
-// Функция для нахождения максимального значения в массиве
-int findMax(vector<int> arr) {
+// Функция для нахождения минимального значения в массиве
+int findMin(vector<int> arr) {
     if (arr.empty()) {
         cout << "Массив пуст!" << endl;
         return 0;
     }
     
-    int max = arr[0];
+    int min = arr[0];
     
     for (int i = 1; i < arr.size(); i++) {
-        if (arr[i] > max) {
-            max = arr[i];
+        if (arr[i] < min) {
+            min = arr[i];
         }
     }
     
-    return max;
+    return min;
 }
 
 int main() {
@@ -27,7 +27,7 @@ int main() {
     cin >> n;
     
     if (n <= 0) {
-        cout << "Ошибка: количество элементов должно быть больше 0" << endl;
+        cout << "Ошибка: количество элементов должно быть больше 0!" << endl;
         return 1;
     }
     
@@ -39,8 +39,8 @@ int main() {
         cin >> numbers[i];
     }
     
-    int maxValue = findMax(numbers);
-    cout << "\nМаксимальное значение в массиве: " << maxValue << endl;
+    int minValue = findMin(numbers);
+    cout << "\nМинимальное значение в массиве: " << minValue << endl;
     
     return 0;
 }
