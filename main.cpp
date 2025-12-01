@@ -8,20 +8,39 @@ int findMax(vector<int> arr) {
         cout << "Массив пуст!" << endl;
         return 0;
     }
-
+    
     int max = arr[0];
+    
     for (int i = 1; i < arr.size(); i++) {
         if (arr[i] > max) {
             max = arr[i];
         }
     }
-
+    
     return max;
 }
 
 int main() {
-    vector<int> numbers = {3, 7, 2, 9, 5, 1};
-    int result = findMax(numbers);
-    cout << "Максимальное значение: " << result << endl;
+    int n;
+    
+    cout << "Введите количество элементов: ";
+    cin >> n;
+    
+    if (n <= 0) {
+        cout << "Ошибка: количество элементов должно быть больше 0" << endl;
+        return 1;
+    }
+    
+    vector<int> numbers(n);
+    
+    cout << "Введите " << n << " чисел:" << endl;
+    for (int i = 0; i < n; i++) {
+        cout << "Элемент " << (i + 1) << ": ";
+        cin >> numbers[i];
+    }
+    
+    int maxValue = findMax(numbers);
+    cout << "\nМаксимальное значение в массиве: " << maxValue << endl;
+    
     return 0;
 }
