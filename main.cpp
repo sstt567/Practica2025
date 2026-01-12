@@ -5,7 +5,7 @@ using namespace std;
 // Функция для нахождения максимального значения в массиве
 int findMax(vector<int> arr) {
     if (arr.empty()) {
-        cout << "Массив пуст!" << endl;
+        cout << "массив пуст!" << endl;
         return 0;
     }
     
@@ -23,7 +23,7 @@ int findMax(vector<int> arr) {
 int main() {
     int n;
     
-    cout << "Введите количество элементов: ";
+    cout << "Введите количество эл: ";
     cin >> n;
     
     if (n <= 0) {
