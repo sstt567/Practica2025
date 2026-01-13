@@ -8,13 +8,11 @@ public class Circle {
         this.radius = radius;
     }
 
-    // Площадь
-    public double area() {
-        return 3.14 * radius * radius;
+    public double getArea() {
+        return Math.PI * radius * radius;
     }
 
-    // Периметр (длина окружности)
-    public double perimeter() {
-        return 2 * 3.14 * radius;
+    public double getPerimeter() {
+        return 2 * Math.PI * radius;
     }
 }

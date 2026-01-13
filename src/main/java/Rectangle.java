@@ -10,13 +10,11 @@ public class Rectangle {
         this.height = height;
     }
 
-    // Площадь
-    public double area() {
+    public double getArea() {
         return width * height;
     }
 
-    // Периметр
-    public double perimeter() {
+    public double getPerimeter() {
         return 2 * (width + height);
     }
 }

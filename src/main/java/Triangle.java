@@ -1,32 +1,24 @@
 public class Triangle {
-    private double a;
-    private double b;
-    private double c;
+    private double a, b, c;
 
     public Triangle(double a, double b, double c) {
-        // Проверка на положительные стороны
         if (a <= 0 || b <= 0 || c <= 0) {
             throw new RuntimeException("There is no figure with such parameters.");
         }
-
-        // Проверка неравенства треугольника
-        if (a + b <= c || a + c <= b || b + c <= a) {
+        if (a + b <= c || b + c <= a || a + c <= b) {
             throw new RuntimeException("There is no figure with such parameters.");
         }
-
         this.a = a;
         this.b = b;
         this.c = c;
     }
 
-    // Площадь (формула Герона)
-    public double area() {
-        double p = perimeter() / 2; // полупериметр
+    public double getArea() {
+        double p = (a + b + c) / 2;
         return Math.sqrt(p * (p - a) * (p - b) * (p - c));
     }
 
-    // Периметр
-    public double perimeter() {
+    public double getPerimeter() {
         return a + b + c;
     }
 }
