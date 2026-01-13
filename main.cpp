@@ -2,13 +2,11 @@
 #include <vector>
 using namespace std;
 
-// Функция для нахождения максимального значения в массиве
 int findMax(vector<int> arr) {
     if (arr.empty()) {
         cout << "массив пуст!" << endl;
         return 0;
     }
-    
     int max = arr[0];
     
     for (int i = 1; i < arr.size(); i++) {
